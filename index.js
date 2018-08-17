@@ -14,7 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 
 // Define routes
-
+app.get('/', function (req, res) {
+    res.render('home');
+});
 
 // listen on port 3000
 app.listen(3000, function (){
